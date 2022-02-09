@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
             openSomeActivityForResult()
         }
     }
+    
     private val resultLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
@@ -42,16 +43,16 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(Intent.ACTION_GET_CONTENT)
         intent.type = "image/*"
         resultLauncher.launch(intent)
-    }
+    }//갤러리 열기 함수
+    
     private fun requestPermission() {
         val permissionLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) {
             Toast.makeText(this, "권한 확인 $it", Toast.LENGTH_SHORT).show()
         }
-        permissionLauncher.launch(android.Manifest.permission.INTERNET)
         permissionLauncher.launch(android.Manifest.permission.CAMERA)
-    }
+    }//갤러리 권한 확인
 
-    //rx
+    //Rx관련 함수
     private fun observeEvent() {
         viewModel.itemEventRelay
             .ofType(MainViewModel.AddSuccessEvent::class.java)
