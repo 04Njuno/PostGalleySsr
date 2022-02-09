@@ -14,4 +14,4 @@ object HttpClient {
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
     }
-}
+} //Retrofit 객체 생성
