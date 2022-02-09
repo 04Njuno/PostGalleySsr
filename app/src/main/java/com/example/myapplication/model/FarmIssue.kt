@@ -10,3 +10,4 @@ data class FarmIssue(
     @SerializedName("img_url")
     val imgUrl: String = ""
 )
+//소비자 데이터 형태 
