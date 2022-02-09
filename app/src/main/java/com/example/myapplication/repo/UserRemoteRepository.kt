@@ -21,7 +21,7 @@ class UserRemoteRepository: UserRepository {
                 Log.d("error", error.toString())
                 false
             }
-    }
+    }//API(POST) 통신 구현
 
     companion object {
         fun getInstance(): UserRemoteRepository {
