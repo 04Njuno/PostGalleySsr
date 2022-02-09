@@ -26,6 +26,7 @@ class MainViewModel: ViewModel() {
                 itemEventRelay.accept(AddSuccessEvent(result))
             }
             .addTo(disposables)
-    }
+    }//데이터 전송 
     class AddSuccessEvent(val isSuccess: Boolean) : RxAction
+    //성공 시 보내지는 값
 }
