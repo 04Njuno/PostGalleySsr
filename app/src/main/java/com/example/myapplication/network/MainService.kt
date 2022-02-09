@@ -14,3 +14,4 @@ interface MainService {
     ): Single<DefaultResponse>
 
 }
+//소비자 정보 서버측으로 보내는 API 생성
